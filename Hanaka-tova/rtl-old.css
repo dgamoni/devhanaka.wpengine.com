@@ -1,0 +1,169 @@
+/*
+Theme Name: Hanaka Tova
+Description: A child theme of the Flatmarket Theme
+Version: 1.0
+Author: Ilana Rosenblum Guttman
+Author URL: www.irgwebsites.com
+Template: flatmarket
+*/
+
+
+@import url('../flatmarket/rtl.css');
+
+/* @import url("css/bootstrap-rtl.css");
+@import url("css/rtl.css");
+@import url("css/megamainmenu-rtl.css");
+@import url("css/responsive-rtl.css"); */
+
+
+body .select2-container .select2-choice {
+    padding: 5px 15px 5px 10px!important;
+    text-transform: capitalize;
+}
+body .select2-results .select2-result-label {
+    padding: 5px 15px 5px 10px;
+    text-transform: capitalize;
+}
+
+.select2-container span {
+text-transform: capitalize;
+}
+
+
+.search-bar #searchform #searchsubmit {
+    background: #198787 url("img/button-search.png") no-repeat center center;
+    height: 40px;
+    text-indent: -99999px;
+    width: 30px;
+}
+
+.shopping-cart .shopping-cart-title{
+background-color: #198787;
+}
+
+.single .shop-content .page-title {
+direction: ltr;
+text-align: right;
+}
+
+@font-face {
+  font-family: 'Tipograf2Light';
+  src: url('fonts/Tipograf2Light.eot');
+
+  src: url('fonts/Tipograf2Light.eot') format('embedded-opentype'),
+  
+ 			 url('fonts/Tipograf2Light.woff') format('woff'),
+ 			 url('fonts/Tipograf2Light.ttf')  format('truetype'), 
+			 url('fonts/Tipograf2Light.svg#Tipograf2Light') format('svg');
+			 font-weight: normal;
+		     font-style: normal;
+  
+}
+
+@font-face {
+    font-family: 'Tipograf2Regular';
+    src: url('fonts/tipograf2.eot');
+    src: url('fonts/tipograf2.eot') format('embedded-opentype'),
+         url('fonts/tipograf2.woff') format('woff'),
+         url('fonts/tipograf2.ttf') format('truetype'),
+         url('fonts/tipograf2.svg#Tipograf2Regular') format('svg');
+}
+
+body {
+    font-family: 'Tipograf2Regular', Arial, sans-serif !important;
+    margin-top: 0 !important;
+    /*font-size: 16px;*/
+    font-size: 18px;
+    color: #393232;
+}
+
+.header-menu, .header-menu a, .header-menu p , .header-menu li{
+font-family: "Tipograf2Light", Arial, sans-serif !important;
+font-weight: 300 !important;
+font-size: 16px;
+font-style: normal;
+} 
+
+/*
+.purple-top{
+	background-color: blue;
+}
+*/
+
+.header-menu-bg {
+    z-index: 10001;
+    width: 100%;
+    background: #cfc0eb;
+}
+/*
+.sidebar .widget_product_categories a, .sidebar .widget_pages ul li a, .sidebar .widget_meta ul li a, .sidebar .widget_nav_menu a{background: none; padding: 10px 0px;}
+.sidebar .widget_product_categories a, .sidebar .widget_pages ul li a, .sidebar .widget_meta
+.sidebar .widget_product_categories a:hover, .sidebar .widget_product_categories .children a:hover, .sidebar .widget_pages ul li a:hover, .sidebar .widget_meta ul li a:hover, .sidebar .widget_nav_menu a:hover{background: none; font-weight: bold;}
+.shopping-cart .shopping-cart-title ,.shopping-cart .shopping-cart-icon,.shopping-cart .shopping-cart-count {
+    background-color: #492441 !important;
+} /*
+.shopping-cart .shopping-cart-count{color: #fff !important;}
+.search-bar #searchform #searchsubmit {
+    background: url("img/button-search.png") no-repeat scroll center center #492441 !important;
+    height: 40px;
+    text-indent: -99999px;
+    width: 30px;
+}
+
+
+/*mnzi*/
+.vc_col-sm-1, .vc_non_responsive .vc_row .vc_col-sm-1, .vc_col-sm-2, .vc_non_responsive .vc_row .vc_col-sm-2, .vc_col-sm-3, .vc_non_responsive .vc_row .vc_col-sm-3, .vc_col-sm-4, .vc_non_responsive .vc_row .vc_col-sm-4, .vc_col-sm-5, .vc_non_responsive .vc_row .vc_col-sm-5, .vc_col-sm-6, .vc_non_responsive .vc_row .vc_col-sm-6, .vc_col-sm-7, .vc_non_responsive .vc_row .vc_col-sm-7, .vc_col-sm-8, .vc_non_responsive .vc_row .vc_col-sm-8, .vc_col-sm-9, .vc_non_responsive .vc_row .vc_col-sm-9, .vc_col-sm-10, .vc_non_responsive .vc_row .vc_col-sm-10, .vc_col-sm-11, .vc_non_responsive .vc_row .vc_col-sm-11, .vc_col-sm-12, .vc_non_responsive .vc_row .vc_col-sm-12 {
+ padding-right:0 !important;   
+}
+
+.sidebar .widget_product_categories a,
+.sidebar .widget_pages ul li a,
+.sidebar .widget_meta ul li a,
+.sidebar .widget_nav_menu a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    padding-bottom: 10px;
+    font-weight: normal;
+   background: #008c8d;
+}
+
+.woocommerce ul.products li.product h3 {
+font-size: 16px;
+}
+
+.woocommerce .product-item-box a.add_to_cart_button,
+.woocommerce .product-item-box a.product_type_simple:not(.add_to_cart_button),
+.woocommerce .product-item-box a.product_type_grouped {
+    float: right;
+    padding: 16px 15px 16px 10px;
+    font-size: 14px;
+}
+
+.woocommerce .product-item-box .product-buttons .yith-wcwl-add-button a::after, .woocommerce .shop-product .summary .yith-wcwl-add-button a::before {
+font-size: 18px;
+}
+
+.footer-container h2.widgettitle {
+font-weight: normal;
+font-size: 18px;
+}
+
+/* Woo Commerce Increase Tab Font Size */
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li,
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li,
+.woocommerce-page div.product .woocommerce-tabs ul.tabs li,
+.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+	font-size: 18px;
+}
+
+/* change sale price */
+.woocommerce div.product p.price del{
+color: #454545;
+}
+
+.woocommerce .single_variation {
+    margin-right: 0;
+}

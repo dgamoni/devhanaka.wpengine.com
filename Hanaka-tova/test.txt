@@ -1,0 +1,40 @@
+Array
+(
+    [billing_first_name] => Test1
+    [billing_last_name] => Testtest
+    [billing_email] => test@hanakatova.com
+    [billing_phone] => 1234567890
+    [billing_country] => IL
+    [billing_address_1] => Test addressDerekh Hebron 1
+    [billing_address_2] => 
+    [billing_city] => Beersheba
+    [billing_postcode] => 84001
+    [mailchimp_woocommerce_newsletter] => 1
+    [shipping_first_name] => Test1
+    [shipping_last_name] => Testtest
+    [shipping_country] => IL
+    [shipping_address_1] => Test addressDerekh Hebron 1
+    [shipping_address_2] => 
+    [shipping_city] => Beersheba
+    [shipping_state] => 
+    [order_comments] => 
+    [woochimp_data] => Array
+        (
+            [woochimp_user_preference] => on
+            [woochimp_mc_eid] => 
+            [woochimp_mc_cid] => 
+        )
+
+    [shipping_method] => Array
+        (
+            [0] => boxit_shipping:4
+        )
+
+    [boxit_field] => 132
+    [lang] => he
+    [payment_method] => cod
+    [terms] => on
+    [terms-field] => 1
+    [_wpnonce] => 8192b17ad0
+    [_wp_http_referer] => /checkout/?wc-ajax=update_order_review
+)
