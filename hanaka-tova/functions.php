@@ -799,10 +799,41 @@ function add_custom_css_dev_hanaka() { ?>
       // // Add the postcode link after billing postcode on Checkout page
       $( '<a href="http://www.israelpost.co.il/zipcode.nsf/demozip" target="_blank">מה המיקוד שלי?</a>' ).insertAfter( "#billing_postcode" );
 
+        $('.woocommerce-terms-and-conditions-link').attr('target', '_blank');
+
+
     });
   </script>
   <style>
-
+  .woocommerce-form-login {
+    /*display: block !important;*/
+  }
   </style>
+  <?php
+}
+
+add_filter( 'woocommerce_checkout_fields', 'change_billing_codpostal_checkout' );
+function change_billing_codpostal_checkout( $fields ) {
+    $fields['billing']['billing_postcode']['label'] = 'CodPostal';
+    return $fields;
+}
+
+add_action( 'woocommerce_email_customer_details', 'my_woocommerce_email_customer_details', 10, 4 );
+function my_woocommerce_email_customer_details( $order ) {
+  $phone= $order->get_billing_phone();
+  $email=$order->get_billing_email();
+  ?>
+  
+     <h2><?php _e( 'Customer details', 'woocommerce' ); ?></h2>
+     
+
+        <p style="display: flex;"><strong style="padding-left: 5px;"><?php echo wp_kses_post( _e('Email address', 'woocommerce')); ?>: </strong> <span class="text"><?php echo wp_kses_post( $email ); ?></span></p>
+
+            <?php if($phone) { ?>
+              <p style="display: flex;"><strong style="padding-left: 5px;"><?php echo wp_kses_post( _e('Phone', 'woocommerce')); ?>: </strong> <span class="text"><?php echo wp_kses_post( $phone ); ?></span></p>
+            <?php } ?>
+
+
+   
   <?php
 }
